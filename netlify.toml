@@ -1,0 +1,14 @@
+[build]
+publish = "public"
+command= "hugo --gc $URL"
+
+[context.production.environment]
+HUGO_VERSION = "0.83.1"
+HUGO_ENV = "production"
+
+[context.dev]
+command= "hugo -b $DEPLOY_PRIME_URL"
+
+[context.dev.environment]
+HUGO_VERSION = "0.83.1"
+HUGO_ENV = "production"
